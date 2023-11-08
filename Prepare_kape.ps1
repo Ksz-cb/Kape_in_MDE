@@ -2,5 +2,5 @@
 cd C:\Users\Public\
 Expand-Archive kape.zip
 Start-Sleep -Seconds 7
-cd .\kape\kape\KAPE
+cd .\kape
 Start-Sleep -Seconds 1

@@ -1,12 +1,12 @@
 ﻿$param = $args[0]
 $default = '$MFT,$J,$LogFile'
 
-cd C:\Users\Public\kape\kape\KAPE
+cd C:\Users\Public\kape
 mkdir collection
 
 if ($($param.count) -eq 1){
     $default=$default+","+$param
-    .\kape.exe --tsource C: --tdest C:\Users\Public\kape\kape\KAPE\collection --tflush --target $default
+    .\kape.exe --tsource C: --tdest C:\Users\Public\kape\collection --tflush --target $default
 }
 else
 {
@@ -16,12 +16,12 @@ else
         $default=$default+","+$param[$i]
         }
         $default=$default.Substring(0,$default.Length-1)
-        .\kape.exe --tsource C: --tdest C:\Users\Public\kape\kape\KAPE\collection --tflush --target $default
+        .\kape.exe --tsource C: --tdest C:\Users\Public\kape\collection --tflush --target $default
     }
 
     else
         {
-        .\kape.exe --tsource C: --tdest C:\Users\Public\kape\kape\KAPE\collection --target $default
+        .\kape.exe --tsource C: --tdest C:\Users\Public\kape\collection --target $default
         }
 }
 
